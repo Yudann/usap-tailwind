@@ -8,28 +8,37 @@
 </head>
     <body class="bg-white text-black">
         <!-- NAVBAR -->
-        <nav class="fixed z-[9999] top-0 left-0 right-0 bg-gray-300 backdrop-blur m-5 rounded-lg ">
+        <nav class="fixed z-[9999] top-0 left-0 right-0 bg-gray-300 backdrop-blur m-5 rounded-lg">
             <div class="flex items-center justify-between px-6 py-5">
-                <h1 class="font-bold text-lg">Yudan Portfolio</h1>
-
-                <!-- HAMBURGER MENU -->
-                 <button class="md:hidden flex flex-col items-end gap-[2px] focus:outline-none">
-                    <div class="w-6 h-[3px] bg-black"></div>
-                    <div class="w-5 h-[3px] bg-black"></div>
-                    <div class="w-4 h-[3px] bg-black"></div>
-                 </button>
-
-                 <ul class="hidden md:flex items-center justify-between gap-5">
-                    <li><a href="#about" class="hover:text-gray-500">About</a></li>
-                    <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
-                    <li><a href="#testimoni" class="hover:text-gray-500">Testimonial</a></li>
-                 </ul>
-            </div>
-        </nav>
+            <h1 class="font-bold text-lg">Yudan Portfolio</h1>
         
+            <!-- HAMBURGER MENU -->
+            <button id="menu-toggle" class="md:hidden flex flex-col items-end gap-[2px] focus:outline-none">
+                <div class="w-6 h-[3px] bg-black transition-all"></div>
+                <div class="w-5 h-[3px] bg-black transition-all"></div>
+                <div class="w-4 h-[3px] bg-black transition-all"></div>
+            </button>
+        
+            <!-- DESKTOP MENU -->
+            <ul class="hidden md:flex items-center justify-between gap-5">
+                <li><a href="#about" class="hover:text-gray-500">About</a></li>
+                <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
+                <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+                <li><a href="#testimoni" class="hover:text-gray-500">Testimonial</a></li>
+            </ul>
+            </div>
+        
+            <!-- MOBILE MENU -->
+            <ul id="mobile-menu" class="hidden flex-col gap-4 px-6 py-4 md:hidden transition-all duration-300 bg-gray-300 text-black rounded-b-lg">
+            <li><a href="#about" class="hover:text-gray-500 block">About</a></li>
+            <li><a href="#projects" class="hover:text-gray-500 block">Projects</a></li>
+            <li><a href="#contact" class="hover:text-gray-500 block">Contact</a></li>
+            <li><a href="#testimoni" class="hover:text-gray-500 block">Testimonial</a></li>
+            </ul>
+        </nav>
+  
         <!-- HERO SECTION -->
-        <section class="h-screen flex items-center justify-center">
+        <section class="h-screen mt-20 md:mt-0 flex items-center justify-center">
             <div class="px-6 flex flex-col-reverse md:flex-row items-center justify-between container mx-auto">
 
                 <!-- text content -->
@@ -201,4 +210,6 @@
             </div>
            </footer>
     </body>
+    <script src="navbar.js"></script>
+
 </html> 
